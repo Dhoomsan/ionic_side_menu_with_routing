@@ -1,0 +1,7 @@
+{
+  "name": "Dhoomsan",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
