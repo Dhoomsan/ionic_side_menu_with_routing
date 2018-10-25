@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FormPage } from '../pages/form/form';
+import { SignInPage } from '../pages/sign-in/sign-in';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,18 +16,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    FormPage
+    FormPage,
+    SignInPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{},{
+      links: [
+        { component: HomePage, name: 'Home', segment: 'home' },
+        { component: ListPage, name: 'List', segment: 'List' },
+        { component: FormPage, name: 'Form', segment: 'Form' },
+        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' }
+      ]
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     ListPage,
-    FormPage
+    FormPage,
+    SignInPage
   ],
   providers: [
     StatusBar,
