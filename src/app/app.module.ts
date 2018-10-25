@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FormPage } from '../pages/form/form';
 import { SignInPage } from '../pages/sign-in/sign-in';
+import {ModalContentPage} from '../pages/form/form';
+import{TabPage} from '../pages/tab/tab';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +19,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     FormPage,
-    SignInPage
+    SignInPage,
+    ModalContentPage,
+    TabPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
         { component: HomePage, name: 'Home', segment: 'home' },
         { component: ListPage, name: 'List', segment: 'List' },
         { component: FormPage, name: 'Form', segment: 'Form' },
-        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' }
+        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' },
+        {component: TabPage,name:'Tab', segment:'Tab'}
       ]
     })
   ],
@@ -36,7 +41,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     FormPage,
-    SignInPage
+    SignInPage,
+    ModalContentPage,
+    TabPage
   ],
   providers: [
     StatusBar,
